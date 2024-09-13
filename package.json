@@ -2,6 +2,7 @@
   "name": "godruoyi.com",
   "type": "module",
   "version": "1.0.0",
+  "packageManager": "pnpm@9.10.0",
   "homepage": "https://godruoyi.com",
   "bugs": {
     "url": "https://github.com/godruoyi/gblog/issues",
