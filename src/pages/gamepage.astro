@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import MainSection from '@components/ui/sections/MainSection.astro'
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+
+const teamData: CollectionEntry<'team'>[] = await getCollection('team')
+if (teamData?.length === 0) {
+    return Astro.redirect('/')
+}
+
+const team = teamData[0].data
+---
+
+<BaseLayout title="Team" description="Currently it is just the two of us">
+    <MainSection title="Unseen Machine" subTitle="Game." />
+
+    
+</BaseLayout>

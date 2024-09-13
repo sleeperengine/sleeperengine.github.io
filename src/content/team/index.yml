@@ -1,0 +1,18 @@
+- avatar: '/src/images/team/lenny.jpeg'
+  social:
+    twitter: 'Tiancaixinxin'
+    blog: 'https://tcxx.info/'
+    github: 'TCXX'
+  title: 'Programmer'
+  name: 'Lenny Siol'
+  description: 'Fucking Guy'
+
+- avatar: '/src/images/team/asli.jpeg'
+  social:
+    twitter: 'draven0xff'
+    blog: 'https://draveness.me/'
+    github: 'draveness'
+  title: 'Artist'
+  name: 'Aslı Siol'
+  description: 'Im walking here!'  
+
