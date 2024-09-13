@@ -9,7 +9,7 @@ import { remarkReadingTime } from './src/support/plugins.ts'
 import { uploadAssetsToS3 } from './src/support/uploader.ts'
 
 export default defineConfig({
-    site: SITE.url,
+    site: 'https://sleeperengine.net',
     image: {
         // If you don't want to optimize images during the BUILD process,
         // you can open this comment. It will significantly reduce the build time but won't optimize any images anymore.
