@@ -16,7 +16,7 @@ const team = teamData[0].data
     <MainSection title="Our Team" subTitle="Currently it is just the two of us." />
 
     <section class="mx-auto max-w-[85rem] px-4 py-8 sm:px-6 lg:px-8 mb-10 2xl:max-w-full">
-        <div class="grid gap-6 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2">
+        <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 sm:grid-cols-2">
             {
                 team.map(f => (
                     <div class="flex flex-col justify-between rounded-xl p-4 md:p-6 bg-white dark:bg-neutral-900/30">
@@ -120,6 +120,50 @@ const team = teamData[0].data
                                     </a>
                                 )
                             }
+
+                            {
+                                f.social?.linkedin && (
+                                    <a
+                                        class="shadow-md inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-300 text-gray-500 hover:text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:border-neutral-800 dark:hover:bg-neutral-700"
+                                        href=`https://www.linkedin.com/in/${f.social.linkedin}`
+                                        target="_blank"
+                                    >
+                                        <svg
+                                            class="flex-shrink-0 size-3.5"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 310 310"
+                                        >
+                                            <g id="XMLID_801_">
+                                                <path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73
+                                                    C77.16,101.969,74.922,99.73,72.16,99.73z"/>
+                                                <path id="XMLID_803_" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4
+                                                    c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/>
+                                                <path id="XMLID_804_" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599
+                                                    c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319
+                                                    c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995
+                                                    C310,145.43,300.549,94.761,230.454,94.761z"/>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                )
+                            }
+
+                            {
+                                f.social?.behance && (
+                                    <a
+                                        class="shadow-md inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-300 text-gray-500 hover:text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:border-neutral-800 dark:hover:bg-neutral-700"
+                                        href=`https://www.behance.net/${f.social.behance}`
+                                        target="_blank"
+                                    >
+                                        <svg
+                                            class="flex-shrink-0 size-3.5"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                                <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
+                                    </a>
+                                )
+                            }
+                            
                         </div>
                     </div>
                 ))

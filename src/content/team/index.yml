@@ -1,18 +1,17 @@
-- avatar: '/src/images/team/lenny.jpeg'
+- avatar: 'https://media.licdn.com/dms/image/v2/C4D03AQGVhsRAu4SGUA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1661200762725?e=1731542400&v=beta&t=Ibnowkk_KAuntonA08vqVotC_UxWK-kpnSDEquVjDYI'
   social:
-    twitter: 'Tiancaixinxin'
-    blog: 'https://tcxx.info/'
-    github: 'TCXX'
-  title: 'Programmer'
+    github: 'Paccolocco'
+    linkedin: 'lenny-siol-340791249/'
+    behance: 'lennysiol'
+  title: 'Programmer & Co-Founder'
   name: 'Lenny Siol'
-  description: 'Fucking Guy'
+  description: 'You gotta put a quote here, the template already has the field for it.'
 
-- avatar: '/src/images/team/asli.jpeg'
+- avatar: 'https://media.licdn.com/dms/image/v2/D5603AQHXO83060JpFQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690836617649?e=1731542400&v=beta&t=0-_Jl7lITE0nNXkkLLS17xTTrySIfoBhyybVpsBBWjs'
   social:
-    twitter: 'draven0xff'
-    blog: 'https://draveness.me/'
-    github: 'draveness'
-  title: 'Artist'
+    linkedin: 'asli-siol/'
+    behance: 'asli-siol'
+  title: 'Artist, Animator & Co-Founder'
   name: 'Aslı Siol'
-  description: 'Im walking here!'  
+  description: "\"Nah I don't want to put a quote.\""  
 

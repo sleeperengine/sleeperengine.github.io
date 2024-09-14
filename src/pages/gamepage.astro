@@ -1,19 +1,54 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
-import MainSection from '@components/ui/sections/MainSection.astro'
-import { getCollection } from 'astro:content'
-import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import BlogComments from '@components/blog/BlogComments'
+import Image from '@components/ui/images/Image.astro'
+import { timeago } from '@support/time'
+import { Settings } from '../config'
+import { SITE } from '@/config'
 
-const teamData: CollectionEntry<'team'>[] = await getCollection('team')
-if (teamData?.length === 0) {
-    return Astro.redirect('/')
-}
 
-const team = teamData[0].data
----
+const posts = await getCollection('gamepages');
+const post = posts.find((p) => p.slug === 'unseenmachine'); // Fetch the specific Markdown file
 
-<BaseLayout title="Team" description="Currently it is just the two of us">
-    <MainSection title="Unseen Machine" subTitle="Game." />
+const { Content, remarkPluginFrontmatter } = await post.render()
+--- 
 
-    
-</BaseLayout>
+<BaseLayout
+    title={post.data.title}
+    description={post.data.description}
+    structuredData={{
+        '@context': 'https://schema.org',
+        '@type': 'NewsArticle',
+        '@id': URL,
+        'url': URL,
+        'description': post.data.description,
+        'image': [
+            // post.data.banner,
+        ],
+        'headline': post.data.title,
+        'datePublished': post.data.pubDate,
+        'dateModified': post.data.pubDate,
+        'author': [{
+            '@type': 'Person',
+            'name': SITE.author,
+            'url': SITE.url,
+        }],
+    }}
+>
+    <section class="mx-auto max-w-6xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pt-12">
+        <div class="shadow-none sm:shadow-sm mt-4 sm:mt-0">
+            <div class="sm:dark:bg-neutral-900/30 sm:bg-neutral-100 px-0 sm:px-6 md:px-10 lg:px-14 py-6">
+                <article class="prose prose-blog sm:prose-lg dark:prose-invert max-w-none">
+                    <Content />
+                </article>
+            </div>
+        </div>
+    </section>
+    <style is:inline>
+        html.dark .astro-code,
+        html.dark .astro-code span {
+            color: var(--shiki-dark) !important;
+            background-color: var(--shiki-dark-bg) !important;
+        }
+</style>
