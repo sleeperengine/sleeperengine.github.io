@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
 import HeroSectionAlt from '@components/ui/sections/HeroSectionAlt.astro'
+import Image from '@components/ui/images/Image.astro'
+import robobImage from '@images/robots/robob.png'
+
+const src = '@images/home.png'
+const alt = "Hi I'm Robob"
 ---
 
 <BaseLayout>
@@ -12,10 +17,28 @@ import HeroSectionAlt from '@components/ui/sections/HeroSectionAlt.astro'
             <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
                 <span class="text-sleeper_green-200 dark:text-sleeper_green-100">info@SleeperEngine.net</span>
             </p>
+            <h1 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight mt-16">
+                or 
+            </h1>
             <HeroSectionAlt
                 title="Join our Discord server"
                 url="https://discord.gg/kgsWcNVvqb"
             />
+            <div class="w-full hidden md:block">
+                <div class="top-12 overflow-hidden w-full md:ml-4 flex justify-center">
+                    {src && alt && (
+                        <Image
+                            src={robobImage}
+                            alt={"Hi I'm Robob"}
+                            class="h-full w-[160px] scale-100 object-cover object-center"
+                            draggable="false"
+                            loading="eager"
+                            format="avif"
+                            disableBlur={true}
+                        />
+                    )}
+                </div>
+            </div>
         </div>
 
     </section>
