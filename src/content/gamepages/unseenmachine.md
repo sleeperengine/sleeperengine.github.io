@@ -56,16 +56,43 @@ Completing a mission will reward the player with currency, depending on the miss
 
 ## Main Menu
 ## Lobby
+After pressing the host or join button the player is brought into their own lobby or the lobby of the host they connected to, respectivly. The Lobby has is split into four areas:
+- The spawning area
+- The mission area
+- The training area
+- The social area
+### Spawning Area
+The spawning area consists of 4 personal pods, one for each player and the docks they connect. When a new player connects they will spawn in their personal pod.
+### Mission Area
+In the mission area the players can [customize their character](#character-customization) and [select and start missions](#mission-selection). In the middle of the area is the mission slection terminal, interacting with it opens the mission selection menu. Once a mission is selected all connected players have to move to the ready area. Once all players are in the ready area the mission starts. Before starting a mission the players can adjust their gear and appearance at the respective terminal.
+#### Mission Selection
+Interacting with the mission selection terminal opens the mission selection menu. Every 30 minutes the mission selection menu generates a set of randomly generated missions. The missions are displayed with information about their complexity and size. Aside from these missions the player can always choose to play the tutorial mission.
+#### Mission Ready
+Once a player selects a mission the ready area opens up. Once all players are inside the ready area the lobby area is unloaded and the mission assets are generated.
+#### Gear Terminal
+At the gear area the player can choose different ablilities
+#### Appearance Terminal
+At the appearance terminal the player can choose different skins and paint jobs for their robot.
 ### Interacting with other Players
-### Character Customization
+
 ### Training and Social Area
-### Mission Selection
+The training and social area are optional areas of the lobby the players can use to try out their gear, spend time waiting for other players to join or to relax inbetween missions. The training area has a practice dummy and parkour elements. The social area has a jukebox that allows players to listen to the games soundtrack.
 ## Mission Generation and Design
+To generate the missions Unseen Machine uses a complex mix of prodecural generation techiques. The generator differentiates between rooms and corridors. Rooms are predesigned assets with random elements. The generator creates a set of random rooms, including necessary rooms, such as the spawn, the extraction zone and the room(s) required for the mission objective. These rooms are then randomly distributed in 3d space. The generator then executes the following steps to ensure that all rooms are connected to each other, directly or indirectly.
+- Delauney Triangulation: The generator creates an edge between all rooms, so that all connections form triangles that have no other rooms withhin the triangle.
+- Min-Spanning Tree: The generator chooses a subset of the Delauney edges, so that all rooms are connected with a minimal amount of edges.
+- Adding back random edges: The generator adds back random edges to create secondary connections.
+- Corridor connection: The generator uses a grid and a modified A-Star algorithm to assign corridor attributes to the grid's elements.
+- Corridor generation: Depending on it's attributes and neighbours each corridor element then generates the required walls, floor, stairs, etc.
+Then each room is randomized to a degree. Each room has elements that are randomly choosen based on a given set of allowed elements.
+This mix of generation techniques allows for...
+
 ### Tutorial Mission
 ### Randomly Generated Missions
 For the mission generation Unseen Machine uses mix of designed assets and random generation. The generator differentiates between 
 ## Game Mechanics
 ### Movement
+Unseen Engine offers a varity of movement mechanics to allow for quick, smooth traversel of the environment. Aside from regular first person movement mechanics 
 ### Interaction
 ### Visiblity
 ### Combat
