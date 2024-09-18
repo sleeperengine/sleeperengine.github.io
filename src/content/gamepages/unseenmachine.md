@@ -21,9 +21,17 @@ Unseen Machine is our first game. It is a cooperative stealth game where up to f
 1.4. [Meta Progression](#meta-progression)<br>
 1.5. [Prototype](#prototype)
 2. [Main Menu](#main-menu)
-3. [Lobby](#lobby)
+3. [Lobby](#lobby)<br>
+3.1. [Spawning Area](#spawning-area)<br>
+3.2. [Mission Area](#mission-area)<br>
+3.3. [Training Area](#training-area)<br>
+3.4. [Social Area](#social-area)<br>
 4. [Mission Generation and Design](#mission-generation-and-design)
-5. [Game Mechanics](#game-mechanics)
+5. [Game Mechanics](#game-mechanics)<br>
+5.1. [Movement](#movement)<br>
+5.2. [Interaction](#interaction)<br>
+5.3. [Visibility](#visiblity)<br>
+5.4. [Combat](#combat)<br>
 6. [Player Character Design](#player-character-design)
 7. [Enemy Design](#enemy-design)<br>
 7.1. [Robob](#robob)<br>
