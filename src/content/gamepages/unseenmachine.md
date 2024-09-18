@@ -24,11 +24,20 @@ Unseen Machine is our first game. It is a cooperative stealth game where up to f
 3. [Lobby](#lobby)
 4. [Mission Generation and Design](#mission-generation-and-design)
 5. [Game Mechanics](#game-mechanics)
-6. [Player Character Design](#mission-generation-and-design)
-7. [Enemy Design](#mission-generation-and-design)
-8. [Visual Design](#mission-generation-and-design)
-9. [Sound Design](#mission-generation-and-design)
-10. [Networking](#mission-generation-and-design)
+6. [Player Character Design](#player-character-design)
+7. [Enemy Design](#enemy-design)<br>
+7.1. [Robob](#robob)<br>
+7.2. [MouseBot](#mousebot)<br>
+7.3. [SpringBot](#springbot)<br>
+7.4. [Motherscuttler](#motherscuttler)<br>
+7.5. [Scuttler](#scuttler)<br>
+7.6. [MoweBot](#mowebot)<br>
+7.7. [BigBot](#bigbot)<br>
+7.8. [SloBot](#slobot)<br>
+7.9. [TurBot](#turbot)<br>
+8. [Visual Design](#visual-design)
+9. [Sound Design](#sound-design)
+10. [Networking](#networking)
 
 ## Disclaimer
 The player will be referred to as 'they' throughout this document, regardless of gender identity.
@@ -61,10 +70,12 @@ After pressing the host or join button the player is brought into their own lobb
 - The mission area
 - The training area
 - The social area
+![Early ship concept art](@images/base/ship.png)
 ### Spawning Area
 The spawning area consists of 4 personal pods, one for each player and the docks they connect. When a new player connects they will spawn in their personal pod.
 ### Mission Area
 In the mission area the players can [customize their character](#character-customization) and [select and start missions](#mission-selection). In the middle of the area is the mission slection terminal, interacting with it opens the mission selection menu. Once a mission is selected all connected players have to move to the ready area. Once all players are in the ready area the mission starts. Before starting a mission the players can adjust their gear and appearance at the respective terminal.
+![Early bridge concept art](@images/base/bridge.png)
 #### Mission Selection
 Interacting with the mission selection terminal opens the mission selection menu. Every 30 minutes the mission selection menu generates a set of randomly generated missions. The missions are displayed with information about their complexity and size. Aside from these missions the player can always choose to play the tutorial mission.
 #### Mission Ready
@@ -104,14 +115,38 @@ If a jump ends touching a wall, the player slowly slides down the wall.
 #### walljump
 If the player presses space while wallsliding they jump of the wall.
 ### Interaction
-Looking at an interactable object, the player can press the interaction-button. The interaction function of the object is the executed.
+Looking at an interactable object, the player can press the interaction-button. If the player is close enough to the object the interaction is executed. Examples for interactions are:
+- Flipping light switches
+- Collecting coins
+- Opening doors
+- Starting the mission objective
 ### Visiblity
+When the player is in the sightcone of an enemy, their detectionmeter slowly fills up, until the enemy actually sees the player. How quickly the player is detected depends on their visibility. The higher their visibility the faster they are detected. Factors, like how illuminated the players' body is and if they are crouching affects how high their visibility is. How quickly and closely the player moves around enemies also affects their detection.
 ### Combat
+Combat is best avioded, but when there's no other choice the player can defend themselves with meele and ranged attacks.
+![Action Poses](@images/player/action_poses.png "Action Poses")
 ## Player Character Design
+It's a robot lady
+Very cool
+
+<img src="/src/images/player/concept.png" alt="Robob concept art" width="79.5%" style="display:inline-block;" />
+<img src="/src/images/player/main_character.png" alt="Robob concept art" width="19.5%" style="display:inline-block;" />
+
+The arms are very important since they are almost always visible in the first person view.
+
+<img src="/src/images/player/arms.png" alt="Robob concept art" width="45%" style="display:inline-block;" />
+<img src="/src/images/player/arms_render.png" alt="Robob concept art" width="54%" style="display:inline-block;" />
+
 ## Enemy Design
 ### Robob
 Robob is the standard enemy. What Robob lacks in special abilities it makes up in numbers. Seriously these guys are everywhere.
-![Robob](@images/robots/robob.png "Robob concept art")
+
+<img src="/src/images/robots/robob.png" alt="Robob concept art" width="29%" style="display:inline-block;" />
+<img src="/src/images/robots/robob_render_front_2.png" alt="Robob Blender render" width="45%" style="display:inline-block;" />
+<img src="/src/images/robots/robob_game_crop.png" alt="Robob Godot concept" width="24%" style="display:inline-block;" />
+
+On the left is the concept art for Robob, in the middle a render taken in Blender and on the right an example image of how the model would look in the game, rendered in the Godot engine.
+
 ### MouseBot
 MouseBot is fast, hard to spot and has only one thing on its mind: KILL! When MouseBot spots an enemy it races towards it beeping loudly. Once it reaches its destination it explodes, dealing massive damage to everything around it. Luckily it can be defused with a single well place shot.
 ![MouseBot](@images/robots/mousebot.png "MouseBot concept art")
@@ -128,17 +163,21 @@ While one scuttler is harmless on its own, they always come in numbers. Scuttler
 MoweBots move around the halls quickly. Their big frontal flashlight makes them a threat to every player hiding in the shadows.
 ![MoweBot](@images/robots/mowebot.png "MoweBot concept art")
 ### BigBot
-BigBots are a real challange even for the biggest weapons. However they are slow and loud, making them easy to avoid.
+BigBots are a real challenge even for the biggest weapons. However they are slow and loud, making them easy to avoid.
 If BigBots manage to close the gap they pack a punch and can destroy the player quickly.
-![BigBot](@images/robots/bigbot.png "BigBot concept art")
-![BigBot](@images/robots/bigbot2.png "BigBot concept art")
+
+<img src="/src/images/robots/bigbot2.png" alt="BigBot concept art" width="49%" style="display:inline-block;" />
+<img src="/src/images/robots/bigbot.png" alt="BigBot concept art" width="49%" style="display:inline-block;" />
+
 ### SloBot
 SloBots are slow and harmless on their own, however they scan their surroundings in a 360 degree perimeter making them hard to get around. Once they spot the player they blair the alarm, notifying all nearby bots of the players position.
 ![SloBot](@images/robots/slobot.png "SloBot concept art")
 ### TurBot
 TurBots are rare but dangerous. Their long arms allow them to move along all surfaces, making them able to hide in corners and attack from unusual angles. If they are unable to suprise the player they run away, hide and wait for another opportunity for a suprise attack.
-![TurBot](@images/robots/turbot.png "TurBot concept art")
-![TurBot](@images/robots/turbot2.png "TurBot concept art")
+
+<img src="/src/images/robots/turbot.png" alt="TurBot concept art" width="49%" style="display:inline-block;" />
+<img src="/src/images/robots/turbot2.png" alt="TurBot concept art" width="49%" style="display:inline-block;" />
+
 ## Visual Design
 ## Sound Design
 ## Networking
