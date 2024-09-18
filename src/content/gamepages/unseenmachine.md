@@ -5,7 +5,7 @@
 
 Unseen Machine is our first game. It is a cooperative stealth game where up to four players jump into the role of robot agents. The players are teleported into randomly generated dungeons where they have to evade enemies, steal everything in sight and escape unseen.
 
-![Robot agent in action](/src/images/gamepages/UnseenMachine.png "Early concept art")
+![Robot agent in action](@images/gamepages/UnseenMachine.png "Early concept art")
 
 <details>
   <summary>Game Design Document</summary>
@@ -85,19 +85,60 @@ To generate the missions Unseen Machine uses a complex mix of prodecural generat
 - Corridor connection: The generator uses a grid and a modified A-Star algorithm to assign corridor attributes to the grid's elements.
 - Corridor generation: Depending on it's attributes and neighbours each corridor element then generates the required walls, floor, stairs, etc.
 Then each room is randomized to a degree. Each room has elements that are randomly choosen based on a given set of allowed elements.
-This mix of generation techniques allows for...
-
+This mix of generation techniques allows for unique but coherent levels. 
 ### Tutorial Mission
-### Randomly Generated Missions
-For the mission generation Unseen Machine uses mix of designed assets and random generation. The generator differentiates between 
+The tutorial mission is not randomly generated but offers different challanges that allow the player to test out all of the games mechanics in a controlled environment.
 ## Game Mechanics
 ### Movement
-Unseen Engine offers a varity of movement mechanics to allow for quick, smooth traversel of the environment. Aside from regular first person movement mechanics 
+Unseen Engine offers a varity of movement mechanics to allow for quick, smooth traversel of the environment. the game uses regular first person movement mechanics, allowing the player to walk, sprint, crouch, slide, jump, wallslide and walljump.
+#### sprinting
+Holding down the shift-key on the keyboard increases the speed the player moves at.
+#### crouching
+Holding down the c-key the player enteres a crouched state. While crouched the players size, [visibility](#visiblity) and speed are reduced. Releasing the c-key returns the player from the crouched state as soon as the player has enough vertical room to stand up.
+#### sliding
+If the player enters the crouch state while sprinting, they start sliding. While sliding the player moves at increased speed at a loss of steerability. The players speed decreases steadily until the player is at crouching speed, at which point the player starts to crouch normally. While sliding the players' [visibility](#visiblity) is decreased.
+#### jumping
+Using the space bar the player jumps into the air. The player can press the space bar again to perform a double jump. The player then has to touch the floor or perform a [wallslide](#wallslide) in order to regain the ability to jump.
+#### wallslide
+If a jump ends touching a wall, the player slowly slides down the wall.
+#### walljump
+If the player presses space while wallsliding they jump of the wall.
 ### Interaction
+Looking at an interactable object, the player can press the interaction-button. The interaction function of the object is the executed.
 ### Visiblity
 ### Combat
 ## Player Character Design
 ## Enemy Design
+### Robob
+Robob is the standard enemy. What Robob lacks in special abilities it makes up in numbers. Seriously these guys are everywhere.
+![Robob](@images/robots/robob.png "Robob concept art")
+### MouseBot
+MouseBot is fast, hard to spot and has only one thing on its mind: KILL! When MouseBot spots an enemy it races towards it beeping loudly. Once it reaches its destination it explodes, dealing massive damage to everything around it. Luckily it can be defused with a single well place shot.
+![MouseBot](@images/robots/mousebot.png "MouseBot concept art")
+### SpringBot
+SpringBots have a laser focus, they chase down anything suspicous they see. They kick first and never ask questions due to a lack of a voice module.
+![SpringBot](@images/robots/springbot.png "SpringBot concept art")
+### Motherscuttler
+The mother of all scuttlers. These bots move around slowly, releasing [Scuttlers](#scuttler) periodically to scout for them. While slow, Motherscuttlers have powerful ranged attacks.
+![Motherscuttler](@images/robots/motherscuttler.png "Motherscuttler concept art")
+### Scuttler
+While one scuttler is harmless on its own, they always come in numbers. Scuttlers run around in the vicinity of their [Motherscuttler](#motherscuttler), latching onto the player and slowing them down so that the Motherscuttler can shoot them easier. One Scuttler can be dispatched easily but new ones keep coming until their source is destoryed.
+![Scuttler](@images/robots/scuttler.png "Scuttler concept art")
+### MoweBot
+MoweBots move around the halls quickly. Their big frontal flashlight makes them a threat to every player hiding in the shadows.
+![MoweBot](@images/robots/mowebot.png "MoweBot concept art")
+### BigBot
+BigBots are a real challange even for the biggest weapons. However they are slow and loud, making them easy to avoid.
+If BigBots manage to close the gap they pack a punch and can destroy the player quickly.
+![BigBot](@images/robots/bigbot.png "BigBot concept art")
+![BigBot](@images/robots/bigbot2.png "BigBot concept art")
+### SloBot
+SloBots are slow and harmless on their own, however they scan their surroundings in a 360 degree perimeter making them hard to get around. Once they spot the player they blair the alarm, notifying all nearby bots of the players position.
+![SloBot](@images/robots/slobot.png "SloBot concept art")
+### TurBot
+TurBots are rare but dangerous. Their long arms allow them to move along all surfaces, making them able to hide in corners and attack from unusual angles. If they are unable to suprise the player they run away, hide and wait for another opportunity for a suprise attack.
+![TurBot](@images/robots/turbot.png "TurBot concept art")
+![TurBot](@images/robots/turbot2.png "TurBot concept art")
 ## Visual Design
 ## Sound Design
 ## Networking
