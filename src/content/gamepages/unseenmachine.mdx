@@ -13,6 +13,18 @@ import robob from '@images/robots/robob.png';
 import robob_render from '@images/robots/robob_render_front_2.png'
 import robob_game from '@images/robots/robob_game_crop.png'
 
+import arms from '@images/player/arms.png'
+import arms_render from '@images/player/arms_render.png'
+
+import concept from '@images/player/concept.png'
+import main_character from '@images/player/main_character.png'
+
+import turbot from '@images/robots/turbot.png'
+import turbot2 from '@images/robots/turbot2.png'
+
+import bigbot from '@images/robots/bigbot.png'
+import bigbot2 from '@images/robots/bigbot2.png'
+
 # Unseen Machine
 
 Unseen Machine is our first game. It is a cooperative stealth game where up to four players jump into the role of robot agents. The players are teleported into randomly generated dungeons where they have to evade enemies, steal everything in sight and escape unseen.
@@ -151,13 +163,18 @@ Combat is best avioded, but when there's no other choice the player can defend t
 It's a robot lady
 Very cool
 
-<img src="/src/images/player/concept.png" alt="Robob concept art" width="79.5%" style="display:inline-block;" />
-<img src="/src/images/player/main_character.png" alt="Robob concept art" width="19.5%" style="display:inline-block;" />
+<div style="display: flex; justify-content: space-between;">
+  <Image src={concept} alt="Player character concept art" style="width: 79.5%;" />
+  <Image src={main_character} alt="Player character concept art" style="width: 19.5%;" />
+</div>
+
 
 The arms are very important since they are almost always visible in the first person view.
 
-<img src="/src/images/player/arms.png" alt="Robob concept art" width="45%" style="display:inline-block;" />
-<img src="/src/images/player/arms_render.png" alt="Robob concept art" width="54%" style="display:inline-block;" />
+<div style="display: flex; justify-content: space-between;">
+  <Image src={arms} alt="Player arms' concept art" style="width: 45%;" />
+  <Image src={arms_render} alt="Player arms' Blender render" style="width: 54%;" />
+</div>
 
 ## Enemy Design
 ### Robob
@@ -190,8 +207,10 @@ MoweBots move around the halls quickly. Their big frontal flashlight makes them 
 BigBots are a real challenge even for the biggest weapons. However they are slow and loud, making them easy to avoid.
 If BigBots manage to close the gap they pack a punch and can destroy the player quickly.
 
-<img src="/src/images/robots/bigbot2.png" alt="BigBot concept art" width="49%" style="display:inline-block;" />
-<img src="/src/images/robots/bigbot.png" alt="BigBot concept art" width="49%" style="display:inline-block;" />
+<div style="display: flex; justify-content: space-between;">
+  <Image src={bigbot2} alt="BigBot concept art" style="width: 49%;" />
+  <Image src={bigbot} alt="BigBot concept art" style="width: 49%;" />
+</div>
 
 ### SloBot
 SloBots are slow and harmless on their own, however they scan their surroundings in a 360 degree perimeter making them hard to get around. Once they spot the player they blair the alarm, notifying all nearby bots of the players position.
@@ -199,8 +218,10 @@ SloBots are slow and harmless on their own, however they scan their surroundings
 ### TurBot
 TurBots are rare but dangerous. Their long arms allow them to move along all surfaces, making them able to hide in corners and attack from unusual angles. If they are unable to suprise the player they run away, hide and wait for another opportunity for a suprise attack.
 
-<img src="/src/images/robots/turbot.png" alt="TurBot concept art" width="49%" style="display:inline-block;" />
-<img src="/src/images/robots/turbot2.png" alt="TurBot concept art" width="49%" style="display:inline-block;" />
+<div style="display: flex; justify-content: space-between;">
+  <Image src={turbot} alt="TurBot concept art" style="width: 49%;" />
+  <Image src={turbot2} alt="TurBot concept art" style="width: 49%;" />
+</div>
 
 ## Visual Design
 Visually Unseen Machine is stronly inspired by retro-futuristic aesthetics. They can also be described as cassette-future, a future as it was often envisioned in 70s and 80s movies, like Alien (1979). Unseen machine blends these visuals with cartoon shaders and mid-poly topology to achive a unique and easy to read look. Many of the objects in the world also fit into the time period, featuring crts, cassettes, floppy disks and nonsense-machines like big table mounted monitors that display the newspaper. 
