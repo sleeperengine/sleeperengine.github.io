@@ -151,9 +151,9 @@ The arms are very important since they are almost always visible in the first pe
 ### Robob
 Robob is the standard enemy. What Robob lacks in special abilities it makes up in numbers. Seriously these guys are everywhere.
 
-<img src="/src/images/robots/robob.png" alt="Robob concept art" width="29%" style="display:inline-block;" />
-<img src="/src/images/robots/robob_render_front_2.png" alt="Robob Blender render" width="45%" style="display:inline-block;" />
-<img src="/src/images/robots/robob_game_crop.png" alt="Robob Godot concept" width="24%" style="display:inline-block;" />
+<img src="@images/robots/robob.png" alt="Robob concept art" width="29%" style="display:inline-block;" />
+<img src="@images/robots/robob_render_front_2.png" alt="Robob Blender render" width="45%" style="display:inline-block;" />
+<img src="@images/robots/robob_game_crop.png" alt="Robob Godot concept" width="24%" style="display:inline-block;" />
 
 On the left is the concept art for Robob, in the middle a render taken in Blender and on the right an example image of how the model would look in the game, rendered in the Godot engine.
 
