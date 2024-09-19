@@ -32,6 +32,7 @@ Unseen Machine is our first game. It is a cooperative stealth game where up to f
 5.2. [Interaction](#interaction)<br>
 5.3. [Visibility](#visiblity)<br>
 5.4. [Combat](#combat)<br>
+5.5. [Abilities](#abilities)<br>
 6. [Player Character Design](#player-character-design)
 7. [Enemy Design](#enemy-design)<br>
 7.1. [Robob](#robob)<br>
@@ -70,7 +71,7 @@ Since each level is randomly generated Unseen Machine offers a great degree of r
 Completing a mission will reward the player with currency, depending on the mission difficulity and the score reached. The player can then spend the currency in the base for permanent unlocks. The player can unlock new gameplay features and visuals for their character.
 
 ### Prototype
-
+In the prototype the player will be able to host or join a game lobby from the main menu. Once in the lobby the player will be able to start a randomly generated mission. The mission will feature one main- and one side-mission-objective, as well as enemies. The player will be able to complete these missions and be extracted in the extraction area back to the lobby. There the player will be rewarded with currency. Meta progression will not yet be featured in the prototype, since focus is on the core gameplay loop.
 ## Main Menu
 ## Lobby
 After pressing the host or join button the player is brought into their own lobby or the lobby of the host they connected to, respectivly. The Lobby has is split into four areas:
@@ -133,6 +134,7 @@ When the player is in the sightcone of an enemy, their detectionmeter slowly fil
 ### Combat
 Combat is best avioded, but when there's no other choice the player can defend themselves with meele and ranged attacks.
 ![Action Poses](@images/player/action_poses.png "Action Poses")
+### Abilities
 ## Player Character Design
 It's a robot lady
 Very cool
@@ -191,6 +193,7 @@ Visually Unseen Machine is stronly inspired by retro-futuristic aesthetics. They
 
 An outline shader is used to allow the player to see in total darkness.
 ## Sound Design
+3D sound is important to the player to get an idea of their sorroundings beyond of what they can see.
 ## Networking
 Unseen Machine relies on peer-to-peer networking. This eliminates the need for a server architecture. However players need to share a local network, or have the be conntected over a third party service such as [Steam's peer-to-peer networking](https://partner.steamgames.com/doc/features/multiplayer).
 
