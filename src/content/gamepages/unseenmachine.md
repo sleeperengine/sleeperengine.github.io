@@ -187,6 +187,9 @@ TurBots are rare but dangerous. Their long arms allow them to move along all sur
 <img src="/src/images/robots/turbot2.png" alt="TurBot concept art" width="49%" style="display:inline-block;" />
 
 ## Visual Design
+Visually Unseen Machine is stronly inspired by retro-futuristic aesthetics. They can also be described as cassette-future, a future as it was often envisioned in 70s and 80s movies, like Alien (1979). Unseen machine blends these visuals with cartoon shaders and mid-poly topology to achive a unique and easy to read look. Many of the objects in the world also fit into the time period, featuring crts, cassettes, floppy disks and nonsense-machines like big table mounted monitors that display the newspaper. 
+
+An outline shader is used to allow the player to see in total darkness.
 ## Sound Design
 ## Networking
 Unseen Machine relies on peer-to-peer networking. This eliminates the need for a server architecture. However players need to share a local network, or have the be conntected over a third party service such as [Steam's peer-to-peer networking](https://partner.steamgames.com/doc/features/multiplayer).
