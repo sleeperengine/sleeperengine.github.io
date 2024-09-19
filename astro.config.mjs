@@ -5,7 +5,6 @@ import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import partytown from '@astrojs/partytown'
 import { SITE } from './src/config.ts'
-import { remarkReadingTime } from './src/support/plugins.ts'
 import { uploadAssetsToS3 } from './src/support/uploader.ts'
 
 export default defineConfig({
@@ -32,7 +31,6 @@ export default defineConfig({
         uploadAssetsToS3(),
     ],
     markdown: {
-        remarkPlugins: [remarkReadingTime],
         shikiConfig: {
             theme: 'github-light',
             themes: {

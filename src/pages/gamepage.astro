@@ -1,17 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import BlogComments from '@components/blog/BlogComments'
-import Image from '@components/ui/images/Image.astro'
-import { timeago } from '@support/time'
-import { Settings } from '../config'
 import { SITE } from '@/config'
-
 
 const posts = await getCollection('gamepages');
 const post = posts.find((p) => p.slug === 'unseenmachine'); // Fetch the specific Markdown file
 
-const { Content, remarkPluginFrontmatter } = await post.render()
+const { Content } = await post.render()
 --- 
 
 <BaseLayout

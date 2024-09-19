@@ -1,5 +1,17 @@
 ---
+title: "It all starts here"
+description: "this is the first post just to try"
+pubDate: "2024-09-01 10:00:00"
+category: "unseenmachine"
+banner: "@images/banners/UnseenMachine.png"
+banner2: "@images/banners/UnseenMachine.png"
+tags: ["Unseen Machine", "Godot"]
+selected: true
 ---
+import { Image } from 'astro:assets';
+import robob from '@images/robots/robob.png';
+import robob_render from '@images/robots/robob_render_front_2.png'
+import robob_game from '@images/robots/robob_game_crop.png'
 
 # Unseen Machine
 
@@ -10,40 +22,40 @@ Unseen Machine is our first game. It is a cooperative stealth game where up to f
 <details>
   <summary>Game Design Document</summary>
 
-# Game Design Document
+# Game Design document
 
 ## Table of Contents
 
-1. [Overview](#overview)<br>
-1.1. [Look and Feel](#look-and-feel)<br>
-1.2. [Gameplay loop](#gameplay-loop)<br>
-1.3. [Playtime](#playtime)<br>
-1.4. [Meta Progression](#meta-progression)<br>
+1. [Overview](#overview)<br/>
+1.1. [Look and Feel](#look-and-feel)<br/>
+1.2. [Gameplay loop](#gameplay-loop)<br/>
+1.3. [Playtime](#playtime)<br/>
+1.4. [Meta Progression](#meta-progression)<br/>
 1.5. [Prototype](#prototype)
 2. [Main Menu](#main-menu)
-3. [Lobby](#lobby)<br>
-3.1. [Spawning Area](#spawning-area)<br>
-3.2. [Mission Area](#mission-area)<br>
-3.3. [Training Area](#training-area)<br>
-3.4. [Social Area](#social-area)<br>
+3. [Lobby](#lobby)<br/>
+3.1. [Spawning Area](#spawning-area)<br/>
+3.2. [Mission Area](#mission-area)<br/>
+3.3. [Training Area](#training-area)<br/>
+3.4. [Social Area](#social-area)<br/>
 4. [Mission Generation and Design](#mission-generation-and-design)
-5. [Game Mechanics](#game-mechanics)<br>
-5.1. [Movement](#movement)<br>
-5.2. [Interaction](#interaction)<br>
-5.3. [Visibility](#visiblity)<br>
-5.4. [Combat](#combat)<br>
-5.5. [Abilities](#abilities)<br>
+5. [Game Mechanics](#game-mechanics)<br/>
+5.1. [Movement](#movement)<br/>
+5.2. [Interaction](#interaction)<br/>
+5.3. [Visibility](#visiblity)<br/>
+5.4. [Combat](#combat)<br/>
+5.5. [Abilities](#abilities)<br/>
 6. [Player Character Design](#player-character-design)
-7. [Enemy Design](#enemy-design)<br>
-7.1. [Robob](#robob)<br>
-7.2. [MouseBot](#mousebot)<br>
-7.3. [SpringBot](#springbot)<br>
-7.4. [Motherscuttler](#motherscuttler)<br>
-7.5. [Scuttler](#scuttler)<br>
-7.6. [MoweBot](#mowebot)<br>
-7.7. [BigBot](#bigbot)<br>
-7.8. [SloBot](#slobot)<br>
-7.9. [TurBot](#turbot)<br>
+7. [Enemy Design](#enemy-design)<br/>
+7.1. [Robob](#robob)<br/>
+7.2. [MouseBot](#mousebot)<br/>
+7.3. [SpringBot](#springbot)<br/>
+7.4. [Motherscuttler](#motherscuttler)<br/>
+7.5. [Scuttler](#scuttler)<br/>
+7.6. [MoweBot](#mowebot)<br/>
+7.7. [BigBot](#bigbot)<br/>
+7.8. [SloBot](#slobot)<br/>
+7.9. [TurBot](#turbot)<br/>
 8. [Visual Design](#visual-design)
 9. [Sound Design](#sound-design)
 10. [Networking](#networking)
@@ -151,9 +163,11 @@ The arms are very important since they are almost always visible in the first pe
 ### Robob
 Robob is the standard enemy. What Robob lacks in special abilities it makes up in numbers. Seriously these guys are everywhere.
 
-<img src="@images/robots/robob.png" alt="Robob concept art" width="29%" style="display:inline-block;" />
-<img src="@images/robots/robob_render_front_2.png" alt="Robob Blender render" width="45%" style="display:inline-block;" />
-<img src="@images/robots/robob_game_crop.png" alt="Robob Godot concept" width="24%" style="display:inline-block;" />
+<div style="display: flex; justify-content: space-between;">
+  <Image src={robob} alt="Robob concept art" style="width: 29%;" />
+  <Image src={robob_render} alt="Robob Blender render" style="width: 45%;" />
+  <Image src={robob_game} alt="Robob Godot concept" style="width: 24%;" />
+</div>
 
 On the left is the concept art for Robob, in the middle a render taken in Blender and on the right an example image of how the model would look in the game, rendered in the Godot engine.
 
